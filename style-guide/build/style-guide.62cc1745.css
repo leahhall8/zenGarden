@@ -62,7 +62,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Space Mono", monospace;
   color: #F1FAEE;
 }
@@ -92,6 +93,17 @@ h2 {
 @media only screen and (min-width: 768px) {
   h2 {
     font-size: 1.8rem;
+    margin: 1em 0 1.4em;
+  }
+}
+
+h3 {
+  font-weight: bold;
+  margin: 1em 0;
+}
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
     margin: 1em 0 1.4em;
   }
 }
@@ -192,7 +204,7 @@ header {
 }
 .cd-main-nav li a {
   color: #260326;
-  border-color: #a171e0;
+  border-color: white;
 }
 @media only screen and (min-width: 1024px) {
   .cd-main-nav li a {
@@ -203,8 +215,23 @@ header {
     box-shadow: 0 2px 0 #260326;
   }
   .cd-main-nav li a:hover {
-    color: #1D3557;
+    color: #935cdb;
   }
+}
+
+.cd-primary-nav li a {
+  color: #935cdb;
+  text-decoration: underline;
+}
+
+.cd-secondary-nav li a {
+  color: #935cdb;
+  text-decoration: underline;
+}
+
+li a {
+  color: #F1FAEE;
+  text-decoration: underline;
 }
 
 .cd-nav-trigger span {
@@ -262,7 +289,8 @@ main > h1 {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Space Mono", monospace;
   color: #F1FAEE;
 }
@@ -292,6 +320,17 @@ h2 {
 @media only screen and (min-width: 768px) {
   h2 {
     font-size: 1.8rem;
+    margin: 1em 0 1.4em;
+  }
+}
+
+h3 {
+  font-weight: bold;
+  margin: 1em 0;
+}
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
     margin: 1em 0 1.4em;
   }
 }
