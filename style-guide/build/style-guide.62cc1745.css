@@ -2,6 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,42 +56,128 @@ table {
   border-spacing: 0;
 }
 
-/* -------------------------------- 
-
-xBackground 
-
--------------------------------- */
 body {
   /* this is the page background */
-  background-color: #ffffff;
+  background-color: #1D3557;
 }
 
-/* -------------------------------- 
-
-xPatterns
-
--------------------------------- */
-.cd-box {
-  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-  background: #ffffff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  padding: 6px;
+h1,
+h2 {
+  font-family: "Space Mono", monospace;
+  color: #F1FAEE;
 }
 
-/* -------------------------------- 
+h1 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 0.4em;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
 
-xNavigation 
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+    margin: 1em 0 1.4em;
+  }
+}
 
--------------------------------- */
+section > h2::before {
+  /* number before each section title */
+  color: #6b2ac0;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: white;
+}
+p a {
+  color: #935cdb;
+  text-decoration: underline;
+}
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+
+figcaption {
+  color: #F1FAEE;
+}
+
+.btn {
+  border: none;
+  box-shadow: none;
+  border-radius: 0.25em;
+  font-size: 1.4rem;
+  font-family: "Space Mono", monospace;
+  color: #1D3557;
+  padding: 0.6em 2.2em;
+  cursor: pointer;
+  background: #F1FAEE;
+}
+.btn:focus {
+  outline: none;
+}
+.no-touch .btn:hover {
+  background: #3e053e;
+}
+.btn.btn-success {
+  background: #6fce72;
+}
+.no-touch .btn.btn-success:hover {
+  background: #82d485;
+}
+.btn.btn-alert {
+  background: #935cdb;
+  color: #F1FAEE;
+}
+.no-touch .btn.btn-alert:hover {
+  background: #a171e0;
+}
+.btn.btn-outline {
+  color: #F1FAEE;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px #F1FAEE;
+}
+.no-touch .btn.btn-outline:hover {
+  color: #1D3557;
+  background: #260326;
+}
+@media only screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.6rem;
+  }
+}
+
+.cd-buttons .cd-box:nth-of-type(2) span {
+  /* CSS class name color */
+  color: #457B9D;
+}
+
 header {
-  background-color: #19191a;
+  background-color: #260326;
 }
 
 .cd-logo {
   /* logo box style */
-  background-color: #5f8ee4;
+  background-color: #260326;
   width: 120px;
 }
 @media only screen and (min-width: 1024px) {
@@ -98,217 +188,137 @@ header {
 
 .cd-main-nav {
   /* main navigation background color - full screen on small devices */
-  background: #19191a;
+  background: #F1FAEE;
 }
 .cd-main-nav li a {
-  color: #ffffff;
-  border-color: #262627;
+  color: #260326;
+  border-color: #a171e0;
 }
 @media only screen and (min-width: 1024px) {
   .cd-main-nav li a {
-    color: #7d7d82;
+    color: white;
   }
   .cd-main-nav li a.selected {
-    color: #ffffff;
-    box-shadow: 0 2px 0 #5f8ee4;
+    color: #F1FAEE;
+    box-shadow: 0 2px 0 #260326;
   }
   .cd-main-nav li a:hover {
-    color: #ffffff;
+    color: #1D3557;
   }
 }
 
 .cd-nav-trigger span {
   /* hamburger menu */
-  background-color: #ffffff;
+  background-color: #F1FAEE;
 }
 .cd-nav-trigger span::before, .cd-nav-trigger span::after {
   /* upper and lower lines */
-  background-color: #ffffff;
+  background-color: #F1FAEE;
 }
 
 .nav-is-visible .cd-nav-trigger span {
   /* hide line in the center on mobile when nav is visible */
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(29, 53, 87, 0);
 }
 .nav-is-visible .cd-nav-trigger span::before, .nav-is-visible .cd-nav-trigger span::after {
   /* preserve visibility of upper and lower lines - close icon */
-  background-color: white;
+  background-color: #1d3557;
 }
 
 .cd-download {
   /* download button top-right visible on big devices */
-  background-color: #323234;
+  background-color: white;
 }
 .no-touch .cd-download:hover {
-  background-color: #3f3f41;
+  background-color: white;
 }
 .cd-download span {
   /* tooltip */
-  background: #5f8ee4;
-  color: #ffffff;
+  background: #260326;
+  color: #1D3557;
 }
 .cd-download span::before {
   /* right arrow color */
-  border-color: #5f8ee4;
+  border-color: #260326;
 }
 
-/* -------------------------------- 
-
-xPage title 
-
--------------------------------- */
 main > h1 {
-  color: #19191a;
+  color: #F1FAEE;
 }
 @media only screen and (min-width: 1600px) {
   main > h1 {
     /* title goes into the header on big devices */
-    color: #ffffff;
+    color: #1D3557;
   }
 }
 
-/* -------------------------------- 
-
-xTypography 
-
--------------------------------- */
-/* -------------------------------- 
-
-xButtons 
-
--------------------------------- */
-/* -------------------------------- 
-
-
-
-/* -------------------------------- 
-
-xForm 
-
--------------------------------- */
-input[type=text],
-select {
-  border: 1px solid #e6e6e6;
-  border-radius: 0.25em;
-  background: #ffffff;
-}
-input[type=text]:focus,
-select:focus {
-  outline: none;
-}
-
-input[type=text] {
-  padding: 0.6em 1em;
-  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
-}
-input[type=text].success {
-  border-color: #6fce72;
-  box-shadow: 0 0 6px rgba(111, 206, 114, 0.2);
-}
-input[type=text].alert {
-  border-color: #e4655f;
-  box-shadow: 0 0 6px rgba(228, 101, 95, 0.2);
-}
-input[type=text]:focus {
-  border-color: #5f8ee4;
-  box-shadow: 0 0 6px rgba(95, 142, 228, 0.2);
-}
-
-input[type=radio],
-input[type=checkbox] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-}
-
-.radio-label,
-.checkbox-label {
-  padding-left: 24px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.radio-label::before, .radio-label::after,
-.checkbox-label::before,
-.checkbox-label::after {
-  /* custom radio and check boxes */
-  content: "";
-  display: block;
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.radio-label::before,
-.checkbox-label::before {
-  left: 0;
-  border: 1px solid #e6e6e6;
-  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
-}
-.radio-label::after,
-.checkbox-label::after {
-  left: 3px;
-  background: url("/icon-check.b3fa7148.svg") no-repeat center center;
-  display: none;
-}
-
-.radio-label::before {
-  border-radius: 50%;
-}
-
-.checkbox-label::before {
+.cd-box {
+  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
+  border: 1px solid #935cdb;
   border-radius: 3px;
+  background: #1D3557;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 6px;
 }
 
-input[type=radio]:checked + label::before,
-input[type=checkbox]:checked + label::before {
-  background-color: #19191a;
-  border: none;
-  box-shadow: none;
+h1,
+h2 {
+  font-family: "Space Mono", monospace;
+  color: #F1FAEE;
 }
 
-input[type=radio]:checked + label::after,
-input[type=checkbox]:checked + label::after {
-  display: block;
+h1 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 0.4em;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 
-.cd-select::after {
-  /* switcher arrow for select element */
-  content: "";
-  position: absolute;
-  z-index: 1;
-  right: 14px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  display: block;
-  width: 16px;
-  height: 16px;
-  background: url("/icon-select.65729cd7.svg") no-repeat center center;
-  pointer-events: none;
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+    margin: 1em 0 1.4em;
+  }
 }
 
-select {
-  position: relative;
-  padding: 0.6em 2em 0.6em 1em;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
+section > h2::before {
+  /* number before each section title */
+  color: #6b2ac0;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: white;
+}
+p a {
+  color: #935cdb;
+  text-decoration: underline;
+}
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+
+figcaption {
+  color: #F1FAEE;
 }
 
 /* -------------------------------- 
@@ -333,7 +343,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Merriweather", serif;
+  font-family: "Lexend Mega", sans-serif;
 }
 
 a {
@@ -345,7 +355,7 @@ img {
 }
 
 input, textarea, select {
-  font-family: "Merriweather", serif;
+  font-family: "Lexend Mega", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -782,49 +792,49 @@ section:nth-of-type(10) h2::before {
   padding: 0.6em 0;
 }
 .cd-colors li:nth-of-type(1) .cd-color-swatch {
-  background: #5f8ee4;
+  background: #260326;
 }
 .cd-colors li:nth-of-type(1) .cd-color-swatch::before {
-  background: #759de8;
+  background: #3e053e;
 }
 .cd-colors li:nth-of-type(1) .cd-color-swatch::after {
-  background: #497fe0;
+  background: #0e010e;
 }
 .cd-colors li:nth-of-type(2) .cd-color-swatch {
-  background: #19191a;
+  background: #F1FAEE;
 }
 .cd-colors li:nth-of-type(2) .cd-color-swatch::before {
-  background: #262627;
-}
-.cd-colors li:nth-of-type(2) .cd-color-swatch::after {
-  background: #0d0d0d;
-}
-.cd-colors li:nth-of-type(3) .cd-color-swatch {
-  background: #e4655f;
-}
-.cd-colors li:nth-of-type(3) .cd-color-swatch::before {
-  background: #e87a75;
-}
-.cd-colors li:nth-of-type(3) .cd-color-swatch::after {
-  background: #e05049;
-}
-.cd-colors li:nth-of-type(4) .cd-color-swatch {
-  background: #e6e6e6;
-}
-.cd-colors li:nth-of-type(4) .cd-color-swatch::before {
-  background: #f3f3f3;
-}
-.cd-colors li:nth-of-type(4) .cd-color-swatch::after {
-  background: #d9d9d9;
-}
-.cd-colors li:nth-of-type(5) .cd-color-swatch {
-  background: #ffffff;
-}
-.cd-colors li:nth-of-type(5) .cd-color-swatch::before {
   background: white;
 }
+.cd-colors li:nth-of-type(2) .cd-color-swatch::after {
+  background: #e1f4da;
+}
+.cd-colors li:nth-of-type(3) .cd-color-swatch {
+  background: #457B9D;
+}
+.cd-colors li:nth-of-type(3) .cd-color-swatch::before {
+  background: #4d89af;
+}
+.cd-colors li:nth-of-type(3) .cd-color-swatch::after {
+  background: #3d6d8b;
+}
+.cd-colors li:nth-of-type(4) .cd-color-swatch {
+  background: #935cdb;
+}
+.cd-colors li:nth-of-type(4) .cd-color-swatch::before {
+  background: #a171e0;
+}
+.cd-colors li:nth-of-type(4) .cd-color-swatch::after {
+  background: #8547d6;
+}
+.cd-colors li:nth-of-type(5) .cd-color-swatch {
+  background: #1D3557;
+}
+.cd-colors li:nth-of-type(5) .cd-color-swatch::before {
+  background: #23416a;
+}
 .cd-colors li:nth-of-type(5) .cd-color-swatch::after {
-  background: #f2f2f2;
+  background: #172944;
 }
 @media only screen and (min-width: 768px) {
   .cd-colors li {
@@ -858,7 +868,7 @@ section:nth-of-type(10) h2::before {
 /* xTypography section - basic style */
 .cd-typography h1::before {
   content: "Aa - ";
-  color: #5f8ee4;
+  color: #260326;
 }
 
 .cd-buttons .cd-box:first-of-type {
@@ -933,5 +943,36 @@ section:nth-of-type(10) h2::before {
 .no-csstransitions .cd-select::after {
   display: none;
 }
+
+/* -------------------------------- 
+
+xBackground 
+
+-------------------------------- */
+/* -------------------------------- 
+
+xPatterns
+
+-------------------------------- */
+/* -------------------------------- 
+
+xNavigation 
+
+-------------------------------- */
+/* -------------------------------- 
+
+xPage title 
+
+-------------------------------- */
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+/* -------------------------------- 
+
+xButtons 
+
+-------------------------------- */
 
 /*# sourceMappingURL=/style-guide.62cc1745.css.map */
