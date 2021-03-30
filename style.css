@@ -1,14 +1,90 @@
-@import "https://fonts.googleapis.com/css2?family=Space+Mono&display=swap";
-html {
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
+body {
+  /* this is the page background */
   background-color: #260326;
 }
 
-body {
-  margin: 10px;
-  color: #F1FAEE;
+h1,
+h2,
+h3 {
   font-family: "Space Mono", monospace;
+  color: #F1FAEE;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0 0 0.4em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: bold;
+  margin: 1em 0;
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+
+h3 {
+  font-weight: bold;
+  margin: 1em 0;
+  font-size: 1.5rem;
+}
+
+section > h2::before {
+  /* number before each section title */
+  color: #6b2ac0;
+}
+
+p {
+  font-family: "Lexend Mega", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #F1FAEE;
+}
+p a {
+  color: #457B9D;
+  text-decoration: underline;
+}
+
+footer {
+  font-family: "Lexend Mega", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+footer a {
+  color: #935cdb;
+  text-decoration: underline;
+}
+
+figcaption {
+  color: #F1FAEE;
+}
+
+aside {
+  font-family: "Lexend Mega", sans-serif;
+  color: #F1FAEE;
+}
+aside a {
+  color: #1D3557;
+  text-decoration: underline;
+}
+
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0px;
   font-size: 12px;
+}
+body div div {
+  padding: 10px;
+}
+body div section div {
+  padding: 10px;
 }
 
 footer {
@@ -19,20 +95,38 @@ footer {
   font-family: "Space Mono", monospace;
   text-align: center;
   margin: 0;
-  padding: 1rem;
   width: 100%;
   height: 100px;
   font-size: 0.8em;
 }
 
+@keyframes header {
+  0% {
+    text-align: left;
+  }
+  25% {
+    text-align: center;
+  }
+  50% {
+    text-align: right;
+  }
+  75% {
+    text-align: center;
+  }
+  100% {
+    text-align: left;
+  }
+}
 #zen-intro h1 {
   text-align: center;
   padding-top: 70px;
-  color: #F1FAEE;
   background: url(images/galaxy.jpg) no-repeat left;
   background-size: cover;
   height: 100px;
   margin: 0;
+  animation-name: header;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 #zen-summary {
@@ -54,13 +148,13 @@ footer {
 #zen-explanation {
   background: url(images/galaxy.jpg) no-repeat bottom;
   background-size: contain;
-  height: 600px;
+  height: 850px;
 }
 
 #zen-requirements {
   background: url(images/galaxy2.jpg) no-repeat bottom;
   background-size: contain;
-  height: 950px;
+  height: 1350px;
 }
 
 .sidebar li {
@@ -75,11 +169,21 @@ footer {
   float: right;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
+  body div div {
+    padding: 0;
+    margin: 10px;
+  }
+
+  #zen-intro header {
+    margin: 0;
+  }
+
   .page-wrapper {
     display: grid;
     grid-template-columns: auto 300px;
-    grid-column-gap: 20px;
+    grid-column-gap: 50px;
+    position: relative;
   }
 
   #zen-intro {
@@ -93,7 +197,7 @@ footer {
 
   #zen-summary {
     background-position: bottom;
-    height: 200px;
+    height: 250px;
   }
   #zen-summary p {
     padding-left: 0;
@@ -101,7 +205,7 @@ footer {
 
   #zen-preamble {
     background-position: bottom;
-    height: 350px;
+    height: 500px;
   }
   #zen-preamble p {
     padding-right: 0;
@@ -109,19 +213,11 @@ footer {
 
   #zen-explanation {
     background-size: 100% 300px;
-    height: 520px;
+    height: 820px;
   }
 
-  #zen-participation {
-    background: url(images/planet.png) no-repeat bottom;
-    background-size: 100px;
-    height: 400px;
-  }
-
-  #zen-benefits {
-    background: url(images/spaceship.png) no-repeat bottom;
-    background-size: 100px;
-    height: 250px;
+  #zen-requirement {
+    height: 20%;
   }
 
   aside.sidebar {
@@ -130,15 +226,29 @@ footer {
     position: fixed;
     top: 0;
     right: 0;
+    max-width: 350px;
     background-color: #935cdb;
   }
 }
 @media only screen and (min-width: 1090px) {
+  #zen-summary {
+    height: 250px;
+  }
+
+  #zen-preamble {
+    height: 410px;
+  }
+
+  #zen-explanation {
+    height: 600px;
+  }
+
   #zen-requirements {
     background-size: 450px;
     margin-bottom: auto;
     padding: 0px;
-    height: 750px;
+    margin-bottom: 50px;
+    height: 50%;
   }
 }
 
